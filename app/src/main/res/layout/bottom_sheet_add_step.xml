@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    android:background="@drawable/bg_bottom_sheet_rounded"
+    android:paddingBottom="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="86dp"
+        android:text="Step description"
+        android:textSize="14sp"
+        android:textColor="@color/dark_gray"
+        android:fontFamily="@font/dm_sans_bold"
+        android:layout_marginBottom="6dp" />
+
+    <!-- same style as your other EditTexts -->
+    <EditText
+        android:id="@+id/etStep"
+        android:layout_width="246dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_field_outline"
+        android:hint="e.g.,Preheat the oven to 180°C"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines="3"
+        android:paddingStart="@dimen/field_pad_h"
+        android:paddingTop="@dimen/field_pad_v"
+        android:paddingEnd="@dimen/field_pad_h"
+        android:paddingBottom="@dimen/field_pad_v"
+        android:textColor="@color/black_900"
+        android:textColorHint="@color/gray_400"
+        android:textSize="16sp" />
+
+    <!-- same style as your orange primary button -->
+    <Button
+        android:id="@+id/btnAddStep"
+        android:layout_width="106dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_btn_primary_orange"
+        android:fontFamily="@font/dm_sans_bold"
+        android:paddingStart="@dimen/btn_pad_h"
+        android:paddingTop="@dimen/btn_pad_v"
+        android:paddingEnd="@dimen/btn_pad_h"
+        android:paddingBottom="@dimen/btn_pad_v"
+        android:text="ADD"
+        android:textAllCaps="false"
+        android:textColor="@color/text_primary_btn_colors"
+        android:textSize="16sp" />
+</LinearLayout>

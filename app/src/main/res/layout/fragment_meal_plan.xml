@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Back arrow -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:padding="2dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"/>
+
+    <!-- (kept for spacing/alignment) -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <!-- Top button bar (empty placeholder you had) -->
+    <LinearLayout
+        android:id="@+id/buttonBar2"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/buttonBar2"
+        app:layout_constraintBottom_toTopOf="@id/buttonBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@color/white">
+
+            <!-- Instructions -->
+            <TextView
+                android:id="@+id/step11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="PLAN MEAL INSTRUCTIONS "
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/step12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="Follow the instructions below:"
+                android:textColor="@color/sous_chef_orange"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="5dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/step_fill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="1. choose the recipe ."
+                    android:textColor="#A4A4A4"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/step_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="2. Choose the date using the date picker."
+                    android:textColor="#A4A4A4"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/step_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="@string/recipe_instructions2"
+                    android:textColor="#A4A4A4"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/step_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="4. Just like that, you have added your planned meal."
+                    android:textColor="#A4A4A4"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+            <!-- NEW: RECIPE NAME PICKER -->
+            <TextView
+                android:id="@+id/labelRecipeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="RECIPE NAME"
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"/>
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etRecipePicker"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_field_outline"
+                android:hint="Select from My Recipes"
+                android:inputType="none"
+                android:focusable="false"
+                android:drawableEnd="@drawable/ic_chevron_down_24"
+                android:drawablePadding="12dp"
+                android:paddingStart="@dimen/field_pad_h"
+                android:paddingTop="@dimen/field_pad_v"
+                android:paddingEnd="@dimen/field_pad_h"
+                android:paddingBottom="@dimen/field_pad_v"
+                android:textColor="@color/black_900"
+                android:textColorHint="@color/gray_400"
+                android:textSize="16sp"/>
+
+            <!-- NEW: DATE PICKER FIELD -->
+            <TextView
+                android:id="@+id/labelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="DATE"
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_field_outline"
+                android:hint="Select date"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:drawableEnd="@drawable/ic_calendar_24"
+                android:drawablePadding="12dp"
+                android:paddingStart="@dimen/field_pad_h"
+                android:paddingTop="@dimen/field_pad_v"
+                android:paddingEnd="@dimen/field_pad_h"
+                android:paddingBottom="@dimen/field_pad_v"
+                android:textColor="@color/black_900"
+                android:textColorHint="@color/gray_400"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btnSubmit2"
+                android:layout_width="320dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_btn_primary_orange"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingStart="@dimen/btn_pad_h"
+                android:paddingTop="@dimen/btn_pad_v"
+                android:paddingEnd="@dimen/btn_pad_h"
+                android:paddingBottom="@dimen/btn_pad_v"
+                android:layout_marginTop="20dp"
+                android:text="Schedule"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary_btn_colors"
+                android:textSize="16sp"
+                app:useMaterialThemeColors="false" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom button bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonBar"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

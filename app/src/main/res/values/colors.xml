@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- sous chef -->
+    <color name="sous_chef_orange">#FE8417</color>
+    <color name="sous_chef_orange_hover">#F57C00</color>
+    <color name="sous_chef_orange_light">#FFE0B2</color>
+    <color name="dark_gray">#393E46</color>
+
+    <!-- Neutral -->
+    <color name="neutral_400">#393E46</color>
+    <color name="black_900">#212121</color>
+    <color name="gray_100">#F6F6F6</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="neutral_700">#EEEEEE</color>
+
+    <!-- Ripple -->
+    <color name="ripple_orange_16">#29FF9800</color>  <!-- 16% d’alpha -->
+    <color name="ripple_dark_12">#1F000000</color>    <!-- 12% d’alpha -->
+
+    <!-- error -->
+    <color name="red_500">#F44336</color>
+</resources>
+

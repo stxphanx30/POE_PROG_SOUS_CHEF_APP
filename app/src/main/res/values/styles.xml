@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CircularImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="AppCompatDatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/sous_chef_orange</item>
+    </style>
+    <style name="ThemeOverlay_SousChef_DatePicker" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/sous_chef_orange</item>
+        <item name="colorSecondary">@color/sous_chef_orange</item>
+
+    </style>
+    <style name="TextAppearance.BottomNav.DMSansLight" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:fontFamily">@font/dm_sans_extralight</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/bottom_nav_selector</item>
+    </style>
+</resources>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="16dp">
+
+            <!-- ===== Header: avatar + Hi,User + notif + search ===== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp">
+
+                <!-- Profile Picture Container -->
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/circle_background"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- Profile Picture -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/profile_picture"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                        app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+                    <!-- Fallback Initial -->
+                    <TextView
+                        android:id="@+id/text_profile_initial"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:text="A"
+                        />
+                </FrameLayout>
+                <!-- Hi, Username -->
+                <TextView
+                    android:id="@+id/textGreeting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/dm_sans_semibold"
+                    android:maxLines="1"
+                    android:text="Hi, User"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Notifications -->
+                <ImageView
+                    android:id="@+id/iconNotifications"
+                    android:layout_width="27.5dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/ic_notifications_bell"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <!-- Search icon (just next to notif) -->
+
+            </LinearLayout>
+            <!-- ===== /Header ===== -->
+            <ImageView
+                android:id="@+id/btnSearchSmall"
+                android:layout_width="41dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_search"
+                android:layout_margin="5dp"
+                android:layout_gravity="end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                />
+            <!-- ===== Row: Let's Try These Out + See all ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="Let's Try These Out"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/seeAllRecipes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:paddingStart="8dp"
+                    android:text="See all"
+                    android:textColor="@color/sous_chef_orange"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Slider -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/recipesSlider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:orientation="horizontal"
+                android:overScrollMode="always"/>
+
+            <!-- ===== Row: Categories + See all ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="Categories"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/seeAllCategories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:paddingStart="8dp"
+                    android:text="See all"
+                    android:textColor="@color/sous_chef_orange"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoriesRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ===== Row: Favorite Recipes + See all ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:textColor="@color/black"
+                    android:text="Favorite Recipes"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/seeAllFavorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:paddingStart="8dp"
+                    android:text="See all"
+                    android:textColor="@color/sous_chef_orange"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favouritesRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,265 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="0dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/backarrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03"
+            android:layout_gravity="start"
+            app:srcCompat="@drawable/arrow" />
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account settings"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#FE8417 "
+            android:fontFamily="@font/dm_sans_bold"
+            />
+
+
+        <!-- Profile Picture Container -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/circle_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Profile Picture -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/profile_picture"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+
+            <!-- Fallback Initial -->
+            <TextView
+                android:id="@+id/text_profile_initial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="36sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="A" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/text_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username"
+                android:textSize="18sp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/dm_sans_bold"/>
+
+            <ImageView
+                android:id="@+id/edit2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/edit"
+                android:contentDescription="@string/edit" />
+
+        </LinearLayout>
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="70dp" />
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elton****@gmail.com"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="start"
+            android:textColor="@color/black"
+            android:fontFamily="@font/dm_sans_light"/>
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Password:********"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/dm_sans_light"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/edit3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/edit"
+                android:src="@drawable/edit"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <!-- Dark Mode Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/label_dark_mode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dark Mode"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dm_sans_light"/>
+
+                <Switch
+                    android:id="@+id/switch_dark_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                />
+            </LinearLayout>
+
+            <!-- Biometrics Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:id="@+id/label_biometric"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Biometrics"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/dm_sans_light"/>
+
+                <Switch
+                    android:id="@+id/switch_biometric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_track"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!-- Contact Us -->
+        <TextView
+            android:id="@+id/btnContactUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/dm_sans_bold"
+            android:text="Contact us"
+            android:textColor="#FE8417 "
+            android:textSize="18sp" />
+
+        <!-- Logout -->
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="211dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_btn_primary_orange"
+            android:fontFamily="@font/dm_sans_bold"
+            android:paddingStart="@dimen/btn_pad_h"
+            android:paddingTop="@dimen/btn_pad_v"
+            android:paddingEnd="@dimen/btn_pad_h"
+            android:paddingBottom="@dimen/btn_pad_v"
+            android:text="LOGOUT"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary_btn_colors"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:useMaterialThemeColors="false"
+            android:layout_marginBottom="30dp"/>
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App version 1.1 sous chef "
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/dm_sans_light"
+            />
+        <!-- App Version  -->
+
+    </LinearLayout>
+</ScrollView>

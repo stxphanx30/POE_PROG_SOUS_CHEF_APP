@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Disabled -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <stroke android:width="@dimen/stroke_1" android:color="@color/gray_300"/>
+            <corners android:radius="@dimen/corner_pill"/>
+        </shape>
+    </item>
+
+    <!-- Pressed / Focused / Hovered -> léger gris de fond -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray_100"/>
+            <stroke android:width="@dimen/stroke_1" android:color="@color/gray_400"/>
+            <corners android:radius="@dimen/corner_pill"/>
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray_100"/>
+            <stroke android:width="@dimen/stroke_1" android:color="@color/gray_400"/>
+            <corners android:radius="@dimen/corner_pill"/>
+        </shape>
+    </item>
+    <item android:state_hovered="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray_100"/>
+            <stroke android:width="@dimen/stroke_1" android:color="@color/gray_400"/>
+            <corners android:radius="@dimen/corner_pill"/>
+        </shape>
+    </item>
+
+    <!-- Default -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <stroke android:width="@dimen/stroke_1" android:color="@color/gray_300"/>
+            <corners android:radius="@dimen/corner_pill"/>
+        </shape>
+    </item>
+</selector>

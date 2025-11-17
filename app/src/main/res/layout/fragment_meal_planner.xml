@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="25dp"
+    android:paddingRight="20dp"
+    android:paddingTop="45dp"
+    android:paddingBottom="20dp">
+
+
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="142dp"
+        android:layout_height="33dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/dm_sans_bold"
+        android:gravity="center"
+        android:text="MEAL PLANNER"
+        android:textColor="#FE8417"
+        android:textSize="18sp" />
+
+    <!-- Button bar (Planner / Pantry) -->
+    <LinearLayout
+        android:id="@+id/buttonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <Button
+            android:id="@+id/btnplanner"
+            android:layout_width="119dp"
+            android:layout_height="33dp"
+            android:background="@drawable/rectangle_112"
+            android:fontFamily="@font/dm_sans_bold"
+            android:text="PLANNER"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnnext"
+            android:layout_width="119dp"
+            android:layout_height="33dp"
+            android:background="@drawable/rectangle_111"
+            android:fontFamily="@font/dm_sans_bold"
+            android:text="PANTRY"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Main scroll containing date sections -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollPlanner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumb_orange"
+        android:scrollbarTrackVertical="@drawable/scrollbar_track_gray">
+
+        <!-- Container for all dates (we fill it dynamically) -->
+        <LinearLayout
+            android:id="@+id/containerDateSections"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom-right add button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:id="@+id/iconNotifications"
+            android:layout_width="54dp"
+            android:layout_height="53dp"
+            android:layout_marginEnd="2dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/pluss" />
+    </LinearLayout>
+
+</LinearLayout>

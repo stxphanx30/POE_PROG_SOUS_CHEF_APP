@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/book"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/group_26" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="340dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_btn_primary_orange"
+        android:fontFamily="@font/dm_sans_bold"
+        android:paddingStart="@dimen/btn_pad_h"
+        android:paddingTop="@dimen/btn_pad_v"
+        android:paddingEnd="@dimen/btn_pad_h"
+        android:paddingBottom="@dimen/btn_pad_v"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/text_primary_btn_colors"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875"
+        app:useMaterialThemeColors="false" />
+
+
+    <TextView
+        android:id="@+id/skipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="40dp"
+        android:background="@null"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Skip"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="173dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:srcCompat="@drawable/group_27"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="399dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="6dp"
+        android:fontFamily="@font/dm_sans"
+        android:gravity="center"
+        android:text="@string/text_6"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="312dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/dm_sans"
+        android:gravity="center"
+        android:text="Made easier with love for you to keep your recipes safe"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

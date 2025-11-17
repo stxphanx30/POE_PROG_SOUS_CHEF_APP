@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="corner_pill">16dp</dimen>   <!-- effet pilule -->
+    <dimen name="stroke_1">1dp</dimen>
+    <dimen name="btn_pad_v">14dp</dimen>
+    <dimen name="btn_pad_h">20dp</dimen>
+    <dimen name="field_radius">16dp</dimen>
+    <dimen name="field_stroke">1dp</dimen>
+    <dimen name="field_pad_v">12dp</dimen>
+    <dimen name="field_pad_h">16dp</dimen>
+</resources>

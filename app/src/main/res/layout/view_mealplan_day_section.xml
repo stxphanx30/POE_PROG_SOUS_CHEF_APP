@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:paddingBottom="8dp">
+
+    <!-- 👇 This is the container we find in code -->
+    <LinearLayout
+        android:id="@+id/containerDayRecipes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:divider="@drawable/divider_line_gray"
+        android:showDividers="middle"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp" />
+</HorizontalScrollView>

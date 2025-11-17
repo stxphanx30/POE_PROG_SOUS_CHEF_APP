@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp"
+    android:padding="8dp">
+
+    <!-- 🗓️ Date Header -->
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Monday, 6 October 2025"
+        android:textColor="@color/sous_chef_orange"
+        android:textSize="16sp"
+        android:fontFamily="@font/dm_sans_bold"
+        android:paddingBottom="6dp" />
+
+    <!-- 📋 Recipes under this date -->
+    <LinearLayout
+        android:id="@+id/containerRecipesForDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/divider_line_gray"
+        android:showDividers="middle" />
+
+</LinearLayout>

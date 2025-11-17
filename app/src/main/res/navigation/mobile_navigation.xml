@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.logintemp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_recipeDetail"
+            app:destination="@id/recipeDetailFragment"/>
+
+        <action
+            android:id="@+id/action_home_to_category"
+            app:destination="@id/categoryMealFragment"/>
+
+        <action
+            android:id="@+id/action_navigation_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.logintemp.ui.search.SearchFragment"
+        android:label="Search Recipes"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_recipeDetail"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_myrecipe"
+        android:name="com.example.logintemp.ui.myrecipe.MyRecipeFragment"
+        android:label="My Recipes"
+        tools:layout="@layout/fragment_my_recipes" />
+
+    <fragment
+        android:id="@+id/navigation_favourites"
+        android:name="com.example.logintemp.ui.favorites.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/navigation_mealplan"
+        android:name="com.example.logintemp.ui.mealplan.MealPlanFragment"
+        android:label="@string/title_mealplan"
+        tools:layout="@layout/fragment_getmeal1" />
+    <fragment
+        android:id="@+id/navigation_mealplan2"
+        android:name="com.example.logintemp.ui.mealplan2.MealPlan2Fragment"
+        android:label="meal plan 2"
+        tools:layout="@layout/fragment_getmeal2" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.logintemp.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.logintemp.ui.recipe.RecipeDetailFragment"
+        android:label="Recipe Detail"
+        tools:layout="@layout/fragment_recipe_detail">
+        <argument
+            android:name="mealId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryMealFragment"
+        android:name="com.example.logintemp.ui.category.CategoryMealFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_category_meal">
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_categoryMeal_to_recipeDetail"
+            app:destination="@id/recipeDetailFragment"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.logintemp.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.logintemp.ui.notifications.NotificationFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/navigation_addrecipe1"
+        android:name="com.example.logintemp.ui.add_recipe.AddRecipeFragment"
+        android:label="addrecipe"
+        tools:layout="@layout/fragment_createrecipe1" />
+    <fragment
+        android:id="@+id/navigation_addrecipe2"
+        android:name="com.example.logintemp.ui.add_recipe.AddRecipe2Fragment"
+        android:label="addrecipe2"
+        tools:layout="@layout/fragment_create_recipe_2" />
+    <fragment
+        android:id="@+id/navigation_addrecipe3"
+        android:name="com.example.logintemp.ui.add_recipe.AddRecipe3Fragment"
+        android:label="addrecipe3"
+        tools:layout="@layout/fragment_create_recipe_3" />
+    <fragment
+        android:id="@+id/navigation_mealplanner"
+        android:name="com.example.logintemp.ui.mealplanner.MealPlannerFragment"
+        android:label="mealplanner"
+        tools:layout="@layout/fragment_meal_planner" />
+    <fragment
+        android:id="@+id/navigation_mealpantry"
+        android:name="com.example.logintemp.ui.mealpantry.MealPantryFragment"
+        android:label="mealpantry"
+        tools:layout="@layout/fragment_mealpantry" />
+    <fragment
+        android:id="@+id/navigation_mealplan3"
+        android:name="com.example.logintemp.ui.mealplan3.MealPlan3Fragment"
+        android:label="meal plan 3"
+        tools:layout="@layout/fragment_meal_plan" />
+
+</navigation>

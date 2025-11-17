@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="SearchBarView">
+        <attr name="sb_hint" format="string" />
+    </declare-styleable>
+</resources>

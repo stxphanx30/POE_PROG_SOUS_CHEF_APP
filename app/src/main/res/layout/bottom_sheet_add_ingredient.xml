@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    android:background="@drawable/bg_bottom_sheet_rounded"
+    android:paddingBottom="24dp">
+
+    <!-- Ingredient -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="Ingredient"
+        android:textColor="@color/dark_gray"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etIngredient"
+        android:layout_width="241dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_field_outline"
+        android:hint="e.g., Flour"
+        android:inputType="textCapSentences"
+        android:paddingStart="20dp"
+        android:paddingTop="@dimen/field_pad_v"
+        android:paddingEnd="20dp"
+        android:paddingBottom="@dimen/field_pad_v"
+        android:textColor="@color/black_900"
+        android:textColorHint="@color/gray_400"
+        android:textSize="16sp" />
+
+    <!-- Amount -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="Amount"
+        android:textColor="@color/dark_gray"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="241dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_field_outline"
+        android:hint="e.g., 2 cups"
+        android:inputType="textCapSentences"
+        android:paddingStart="@dimen/field_pad_h"
+        android:paddingTop="@dimen/field_pad_v"
+        android:paddingEnd="@dimen/field_pad_h"
+        android:paddingBottom="@dimen/field_pad_v"
+        android:textColor="@color/black_900"
+        android:textColorHint="@color/gray_400"
+        android:textSize="16sp" />
+
+    <!-- Add button (styled like your LOGIN example) -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="106dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_btn_primary_orange"
+        android:fontFamily="@font/dm_sans_bold"
+        android:paddingStart="@dimen/btn_pad_h"
+        android:paddingTop="@dimen/btn_pad_v"
+        android:paddingEnd="@dimen/btn_pad_h"
+        android:paddingBottom="@dimen/btn_pad_v"
+        android:text="ADD"
+        android:textAllCaps="false"
+        android:textColor="@color/text_primary_btn_colors"
+        android:textSize="16sp" />
+</LinearLayout>

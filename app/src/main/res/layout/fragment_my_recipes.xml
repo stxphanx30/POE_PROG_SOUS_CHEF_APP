@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="20dp">
+
+    <!-- 🔸 Static top section -->
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/dm_sans_bold"
+        android:text="My recipes"
+        android:textColor="#FE8417"
+        android:textSize="18sp" />
+
+    <include
+        android:id="@+id/searchBar"
+        layout="@layout/view_search_bar"
+        />
+
+    <!-- 🔸 Scroll area for recipe cards -->
+    <ScrollView
+        android:id="@+id/scrollRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumb_orange"
+        android:scrollbarTrackVertical="@drawable/scrollbar_track_gray"
+        android:scrollbars="vertical"
+        android:layout_marginTop="30dp"
+        android:fadeScrollbars="false">
+
+        <LinearLayout
+            android:id="@+id/containerRecipes"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+    </ScrollView>
+
+    <!-- 🔸 Bottom section (we’ll style this in the next step) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <!-- Profile Picture Container -->
+        <FrameLayout
+            android:layout_width="45dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/circle_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Profile Picture -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/profile_picture"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:shapeAppearanceOverlay="@style/CircularImageView" />
+
+
+            <!-- Fallback Initial -->
+            <TextView
+                android:id="@+id/text_profile_initial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="A" />
+        </FrameLayout>
+        <!-- Hi, Username -->
+        <TextView
+            android:id="@+id/textGreeting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/dm_sans_semibold"
+            android:maxLines="1"
+            android:text="User"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- plus -->
+        <ImageView
+            android:id="@+id/iconNotifications"
+            android:layout_width="54dp"
+            android:layout_height="53dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/pluss"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <!-- Search icon (just next to notif) -->
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
