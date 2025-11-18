@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="8dp">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/categoryImage"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/categoryCard"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="Category Image"
-        app:shapeAppearanceOverlay="@style/CircularImageView"/>
+        app:cardCornerRadius="35dp"
+        app:cardUseCompatPadding="false"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/sous_chef_orange">
+
+        <ImageView
+            android:id="@+id/categoryImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/categoryName"
@@ -25,4 +33,5 @@
         android:textSize="14sp"
         android:textStyle="bold"
         android:paddingTop="4dp"/>
+
 </LinearLayout>

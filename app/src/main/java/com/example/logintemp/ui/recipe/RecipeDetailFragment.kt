@@ -36,9 +36,7 @@ class RecipeDetailFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        binding.deleteButton.setOnClickListener {
-            // TODO: handle deleting from favourites (RoomDB)
-        }
+
 
         return binding.root
     }
@@ -57,7 +55,7 @@ class RecipeDetailFragment : Fragment() {
                                 meal.strIngredient13, meal.strIngredient14, meal.strIngredient15
                             ).filter { it.isNotBlank() }.size)
 
-                    binding.mealDuration.text = "16 min" // fake for now
+                    binding.mealDuration.text = "16 min"
 
                     Glide.with(requireContext())
                         .load(meal.strMealThumb)

@@ -78,7 +78,21 @@ interface RecipeDao {
 
     @Query("SELECT id, name FROM recipes ORDER BY name ASC")
     suspend fun listRecipeIdAndName(): List<RecipeIdName>
+    // RecipeDao
+    @Query("SELECT * FROM Recipes WHERE id = :id")
+    suspend fun getById(id: Long): RecipeEntity?
 
+    @Query("DELETE FROM Recipes WHERE id = :id")
+    suspend fun deleteById(id: Long)
+
+    // suspend versions to fetch lists once (not Flow)
+    @Query("SELECT * FROM ingredients WHERE recipeId = :recipeId ORDER BY 'order' ASC")
+    suspend fun getIngredientsForOnce(recipeId: Long): List<IngredientEntity>
+
+    @Query("SELECT * FROM steps WHERE recipeId = :recipeId ORDER BY 'order' ASC")
+    suspend fun getStepsForOnce(recipeId: Long): List<StepEntity>
+
+// If you also have Flow versions, keep them (Flow<List<...>>) if used elsewhere.
     /* ---------- FAVORITES MANAGEMENT ---------- */
 
     @Query("UPDATE recipes SET is_favorite = :fav WHERE id = :recipeId")

@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_mealplan,
                 R.id.navigation_addrecipe1,
                 R.id.navigation_addrecipe2,
+                R.id.recipeDetailFragment,
                 R.id.navigation_mealplan2,
                 R.id.navigation_addrecipe3 -> binding.navView.visibility = View.GONE
                 else -> binding.navView.visibility = View.VISIBLE

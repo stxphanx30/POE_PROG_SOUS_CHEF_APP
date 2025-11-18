@@ -90,6 +90,15 @@
 
 
     <fragment
+        android:id="@+id/myRecipeDetailFragment"
+        android:name="com.example.logintemp.ui.myrecipe.MyRecipeDetailFragment"
+        android:label="My Recipe Detail">
+
+        <argument
+            android:name="recipeId"
+            app:argType="long" />
+    </fragment>
+    <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.logintemp.ui.profile.ProfileFragment"
         android:label="@string/title_profile"

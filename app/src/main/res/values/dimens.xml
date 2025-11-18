@@ -7,4 +7,5 @@
     <dimen name="field_stroke">1dp</dimen>
     <dimen name="field_pad_v">12dp</dimen>
     <dimen name="field_pad_h">16dp</dimen>
+    <dimen name="recycler_side_padding">12dp</dimen>
 </resources>

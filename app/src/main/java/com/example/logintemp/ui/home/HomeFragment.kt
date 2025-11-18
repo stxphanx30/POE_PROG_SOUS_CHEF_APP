@@ -103,6 +103,7 @@ class HomeFragment : Fragment() {
         }
 
 
+
         return root
     }
 
@@ -142,26 +143,39 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupRecyclerViews() {
-        // Categories RecyclerView
+        // --------------------------
+        //  CATEGORIES RECYCLER
+        // --------------------------
         categoryAdapter = CategoryAdapter(listOf()) { category ->
             val action = HomeFragmentDirections.actionHomeToCategory(category.strCategory)
             findNavController().navigate(action)
         }
+
         binding.categoriesRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             adapter = categoryAdapter
         }
 
-        // Favourites RecyclerView (horizontal)
-        favouriteAdapter = FavouriteAdapter { recipeEntity ->
-            // When heart icon clicked on favorite card -> toggle favorite (persist)
-            toggleFavoriteWithUndo(recipeEntity)
-        }
+        // --------------------------
+        //  FAVORITES RECYCLER
+        // --------------------------
+        favouriteAdapter = FavouriteAdapter(
+            onFavClick = { recipeEntity ->
+                // toggle favorite (handle persistence + undo)
+                toggleFavoriteWithUndo(recipeEntity)
+            },
+            onImageClick = {
+                // 👉 When the image is clicked, go to the Favorites Page
+                findNavController().navigate(R.id.navigation_favourites)
+            }
+        )
+
         binding.favouritesRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             adapter = favouriteAdapter
         }
     }
+
 
     private fun setupViewPager() {
         recipeSliderAdapter = RecipeSliderAdapter(emptyList()) { selectedMeal ->

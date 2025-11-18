@@ -24,4 +24,5 @@ data class RecipeEntity(
     val isFavorite: Boolean = false,
 
     val createdAt: Long = System.currentTimeMillis()
+
 )

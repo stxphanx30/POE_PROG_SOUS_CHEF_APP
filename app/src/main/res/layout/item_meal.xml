@@ -7,42 +7,44 @@
     android:paddingTop="8dp"
     android:paddingBottom="8dp">
 
-    <!-- Left: image with rounded corners + heart overlay -->
-    <androidx.cardview.widget.CardView
+    <!-- LEFT: IMAGE with ORANGE STROKE -->
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardImage"
         android:layout_width="112dp"
         android:layout_height="96dp"
         app:cardCornerRadius="16dp"
+        app:strokeColor="@color/sous_chef_orange"
+        app:strokeWidth="1dp"
         app:cardUseCompatPadding="false"
         app:cardElevation="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <ImageView
-            android:id="@+id/imgRecipe"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/app_name"/>
+            android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/btnHeart"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="Favorite"
-            android:src="@drawable/heart_filled" />
-    </FrameLayout>
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imgRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"/>
 
-    <!-- Right: text block -->
+            <ImageButton
+                android:id="@+id/btnHeart"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Favorite"
+                android:src="@drawable/heart_filled" />
+
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- RIGHT SIDE: text block -->
     <LinearLayout
         android:id="@+id/rightColumn"
         android:layout_width="0dp"
@@ -88,4 +90,3 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

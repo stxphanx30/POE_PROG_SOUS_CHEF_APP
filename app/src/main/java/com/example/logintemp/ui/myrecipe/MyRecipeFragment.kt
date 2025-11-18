@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -54,7 +55,7 @@ class MyRecipeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupHeader()
 
-        // Observe recipes for the current user; the Flow will emit again when DB changes (e.g. favorites toggled)
+        // Observe recipes for the current user; the Flow will emit again when DB changes (e.g. favourites toggled)
         viewLifecycleOwner.lifecycleScope.launch {
             recipeRepo.getRecipes(currentUserId).collect { list ->
                 renderRecipes(list)
@@ -118,8 +119,22 @@ class MyRecipeFragment : Fragment() {
                 img.setImageResource(R.drawable.logo) // fallback
             }
 
+            // --- NEW: image click navigates to local recipe detail page ---
+            // We pass the local primary key 'id' in a Bundle with key "recipeId".
+            img.setOnClickListener {
+                try {
+                    // Ensure recipe.id exists (adjust cast if your id is Int)
+                    val id = recipe.id
+                    // Use bundle navigation; change destination id if your nav graph uses a different id
+                    val bundle = bundleOf("recipeId" to id)
+                    // Replace R.id.myRecipeDetailFragment with actual id in nav_graph if different
+                    findNavController().navigate(R.id.myRecipeDetailFragment, bundle)
+                } catch (e: Exception) {
+                    Toast.makeText(requireContext(), "Could not open recipe details", Toast.LENGTH_SHORT).show()
+                }
+            }
+
             // --- Favorite: read initial state from recipe and persist on toggle ---
-            // initial liked state comes from DB field (isFavorite)
             var liked = recipe.isFavorite
 
             // set the correct icon on load

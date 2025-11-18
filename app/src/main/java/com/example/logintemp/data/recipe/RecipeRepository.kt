@@ -33,4 +33,20 @@ class RecipeRepository(private val dao: RecipeDao) {
     fun getFavoriteRecipesFlow() = dao.getFavoriteRecipesFlow()
 
     suspend fun getFavoriteRecipes() = dao.getFavoriteRecipes()
+    // in RecipeRepository.kt (add these suspending methods)
+    suspend fun getById(id: Long): RecipeEntity? {
+        return dao.getById(id)
+    }
+
+    suspend fun deleteById(id: Long) {
+        dao.deleteById(id)
+    }
+
+    suspend fun getIngredientsFor(recipeId: Long): List<IngredientEntity> {
+        return dao.getIngredientsForOnce(recipeId)
+    }
+
+    suspend fun getStepsFor(recipeId: Long): List<StepEntity> {
+        return dao.getStepsForOnce(recipeId)
+    }
 }
