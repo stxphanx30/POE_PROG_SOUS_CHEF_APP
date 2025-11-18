@@ -102,6 +102,14 @@ class HomeFragment : Fragment() {
 
         }
 
+        binding.seeAllRecipes.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeToSeeAllRecipes()
+            findNavController().navigate(action)
+        }
+        binding.seeAllCategories.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeToCategories()
+            findNavController().navigate(action)
+        }
 
 
         return root

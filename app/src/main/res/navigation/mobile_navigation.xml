@@ -6,6 +6,31 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
+        android:id="@+id/seeAllRecipesFragment"
+        android:name="com.example.logintemp.ui.recipes.SeeAllRecipesFragment"
+        android:label="See All Recipes" >
+
+        <action
+            android:id="@+id/action_seeAllRecipes_to_recipeDetail"
+            app:destination="@id/recipeDetailFragment"/>
+        <action
+            android:id="@+id/action_seeAllRecipes_to_homeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.logintemp.ui.categories.CategoriesFragment"
+        android:label="Categories" >
+    <action
+        android:id="@+id/action_categoriesFragment_to_categoryMealFragment"
+        app:destination="@id/categoryMealFragment"/>
+
+        <action
+            android:id="@+id/action_categoriesFragment_to_homeFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.logintemp.ui.home.HomeFragment"
         android:label="@string/title_home"
@@ -22,6 +47,17 @@
         <action
             android:id="@+id/action_navigation_home_to_searchFragment"
             app:destination="@id/searchFragment" />
+
+        <action
+            android:id="@+id/action_home_to_seeAllRecipes"
+            app:destination="@id/seeAllRecipesFragment" />
+
+
+        <action
+            android:id="@+id/action_home_to_categories"
+            app:destination="@id/categoriesFragment" />
+
+
 
     </fragment>
 
@@ -139,5 +175,6 @@
         android:name="com.example.logintemp.ui.mealplan3.MealPlan3Fragment"
         android:label="meal plan 3"
         tools:layout="@layout/fragment_meal_plan" />
+
 
 </navigation>
