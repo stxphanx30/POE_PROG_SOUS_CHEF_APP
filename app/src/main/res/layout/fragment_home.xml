@@ -67,7 +67,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/dm_sans_semibold"
                     android:maxLines="1"
-                    android:text="Hi, User"
+                    android:text="@string/greeting_user"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="Let's Try These Out"
+                    android:text="@string/lets_try_these_out"
                     android:textSize="18sp"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
@@ -120,7 +120,7 @@
                     android:focusable="true"
                     android:fontFamily="@font/dm_sans_bold"
                     android:paddingStart="8dp"
-                    android:text="See all"
+                    android:text="@string/see_all"
                     android:textColor="@color/sous_chef_orange"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="Categories"
+                    android:text="@string/categories"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -163,7 +163,7 @@
                     android:focusable="true"
                     android:fontFamily="@font/dm_sans_bold"
                     android:paddingStart="8dp"
-                    android:text="See all"
+                    android:text="@string/see_all"
                     android:textColor="@color/sous_chef_orange"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -187,7 +187,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/dm_sans_bold"
                     android:textColor="@color/black"
-                    android:text="Favorite Recipes"
+                    android:text="@string/favorite_recipes"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -199,7 +199,7 @@
                     android:focusable="true"
                     android:fontFamily="@font/dm_sans_bold"
                     android:paddingStart="8dp"
-                    android:text="See all"
+                    android:text="@string/see_all"
                     android:textColor="@color/sous_chef_orange"
                     android:textSize="14sp" />
             </LinearLayout>

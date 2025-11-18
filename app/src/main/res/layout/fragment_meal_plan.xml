@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="PLAN MEAL INSTRUCTIONS "
+                android:text="@string/instructions_plan_meal_title"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="Follow the instructions below:"
+                android:text="@string/instructions_subtitle"
                 android:textColor="@color/sous_chef_orange"
                 android:textSize="14sp"/>
 
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="1. choose the recipe ."
+                    android:text="@string/instruction_step_1"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="2. Choose the date using the date picker."
+                    android:text="@string/instruction_step_2"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -130,7 +130,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="4. Just like that, you have added your planned meal."
+                    android:text="@string/instruction_step_4"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="RECIPE NAME"
+                android:text="@string/label_recipe_name"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/bg_field_outline"
-                android:hint="Select from My Recipes"
+                android:hint="@string/hint_select_recipe"
                 android:inputType="none"
                 android:focusable="false"
                 android:drawableEnd="@drawable/ic_chevron_down_24"
@@ -174,7 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="DATE"
+                android:text="@string/label_date"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -183,7 +183,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/bg_field_outline"
-                android:hint="Select date"
+                android:hint="@string/hint_select_date"
                 android:focusable="false"
                 android:clickable="true"
                 android:inputType="none"
@@ -210,7 +210,7 @@
                 android:paddingEnd="@dimen/btn_pad_h"
                 android:paddingBottom="@dimen/btn_pad_v"
                 android:layout_marginTop="20dp"
-                android:text="Schedule"
+                android:text="@string/btn_schedule"
                 android:textAllCaps="false"
                 android:textColor="@color/text_primary_btn_colors"
                 android:textSize="16sp"

@@ -16,12 +16,12 @@
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="142dp"
-        android:layout_height="33dp"
+        android:layout_height="65dp"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/dm_sans_bold"
         android:gravity="center"
-        android:text="MEAL PLANNER"
+        android:text="@string/meal_planner_title"
         android:textColor="#FE8417"
         android:textSize="18sp" />
 
@@ -42,7 +42,7 @@
             android:layout_height="33dp"
             android:background="@drawable/rectangle_112"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="PLANNER"
+            android:text="@string/planner_button"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp" />
@@ -53,7 +53,7 @@
             android:layout_height="33dp"
             android:background="@drawable/rectangle_111"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="PANTRY"
+            android:text="@string/pantry_button"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="18sp" />

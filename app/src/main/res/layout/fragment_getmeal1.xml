@@ -30,7 +30,7 @@
         android:paddingTop="@dimen/btn_pad_v"
         android:paddingEnd="@dimen/btn_pad_h"
         android:paddingBottom="@dimen/btn_pad_v"
-        android:text="Next"
+        android:text="@string/next"
         android:textAllCaps="false"
         android:textColor="@color/text_primary_btn_colors"
         android:textSize="16sp"
@@ -45,20 +45,20 @@
 
     <TextView
         android:id="@+id/skipText"
-        android:layout_width="38dp"
-        android:layout_height="27dp"
+        android:layout_width="116dp"
+        android:layout_height="22dp"
         android:background="@null"
         android:clickable="true"
         android:focusable="true"
-        android:text="Skip"
+        android:text="@string/skip"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnNext"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintVertical_bias="0.222" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -73,8 +73,8 @@
 
     <TextView
         android:id="@+id/textView25"
-        android:layout_width="374dp"
-        android:layout_height="50dp"
+        android:layout_width="373dp"
+        android:layout_height="67dp"
         android:fontFamily="@font/dm_sans"
         android:gravity="center"
         android:text="@string/text_10"
@@ -88,8 +88,8 @@
 
     <TextView
         android:id="@+id/textView26"
-        android:layout_width="402dp"
-        android:layout_height="44dp"
+        android:layout_width="407dp"
+        android:layout_height="93dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/dm_sans"
@@ -99,7 +99,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629" />
+        app:layout_constraintVertical_bias="0.675" />
 
     <TextView
         android:id="@+id/textView15"
@@ -108,7 +108,7 @@
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/dm_sans"
         android:gravity="center"
-        android:text="Made easier for you to have your weekly meal ready to go"
+        android:text="@string/mealmess"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"

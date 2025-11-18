@@ -26,7 +26,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/dm_sans_bold"
-        android:text="Categories"
+        android:text="@string/categories"
         android:textColor="#FE8417"
         android:textSize="18sp" />
 

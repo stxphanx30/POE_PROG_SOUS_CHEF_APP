@@ -30,7 +30,7 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/dm_sans_bold"
             android:gravity="center"
-            android:text="PANTRY"
+            android:text="@string/title_pantry"
             android:textColor="#FE8417"
             android:textSize="18sp" />
 
@@ -58,7 +58,7 @@
             android:layout_height="33dp"
             android:background="@drawable/rectangle_111"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="PLANNER"
+            android:text="@string/btn_planner"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="18sp" />
@@ -70,7 +70,7 @@
             android:layout_height="33dp"
             android:background="@drawable/rectangle_112"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="PANTRY"
+            android:text="@string/btn_pantry"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp" />
@@ -102,7 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="PANTRY INSTRUCTIONS "
+                android:text="@string/pantry_instructions_title"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="Follow the instructions below:"
+                android:text="@string/pantry_instructions_subtitle"
                 android:textColor="@color/sous_chef_orange"
                 android:textSize="14sp"/>
 
@@ -130,7 +130,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="1. Click on the + button."
+                    android:text="@string/pantry_step_1"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -139,7 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="2. In the pop-up screen, write the item name (e.g., “Sugar”)."
+                    android:text="@string/pantry_step_2"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -148,7 +148,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="3. Choose the entry category → either Have or To Get."
+                    android:text="@string/pantry_step_3"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -157,7 +157,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="4. Then click on the Add button."
+                    android:text="@string/pantry_step_4"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -166,7 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="5. Just like that, you have added your pantry item."
+                    android:text="@string/pantry_step_5"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -175,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="6. The item will be displayed in the list under either Have or To Get, depending on your choice."
+                    android:text="@string/pantry_step_1"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp" />
 
@@ -201,7 +201,7 @@
                     android:paddingTop="4dp"
                     android:paddingRight="12dp"
                     android:paddingBottom="6dp"
-                    android:text="HAVE:"
+                    android:text="@string/label_have"
                     android:textColor="@color/sous_chef_orange"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -252,7 +252,7 @@
                     android:paddingTop="4dp"
                     android:paddingRight="12dp"
                     android:paddingBottom="6dp"
-                    android:text="TO GET"
+                    android:text="@string/label_to_get"
                     android:textColor="@color/sous_chef_orange"
                     android:textSize="14sp"
                     android:textStyle="bold" />

@@ -18,7 +18,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/dm_sans_bold"
-        android:text="Favorites recipes"
+        android:text="@string/favorite_recipes"
         android:textColor="@color/sous_chef_orange"
         android:textSize="18sp" />
 

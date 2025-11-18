@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoginTemp</string>
+    <string name="title_home">Início</string>
+    <string name="title_dashboard">Painel</string>
+    <string name="title_notifications">Notificações</string>
+    <string name="title_mealplan">Plano de Refeições</string>
+    <string name="title_settings">Configurações</string>
+
+    <string name="title_profile">Perfil</string>
+
+    <string name="profile_picture">Foto de Perfil</string>
+
+    <string name="sign_up">Registar</string>
+    <string name="we_are_about_to_start_our_adventure_register_or_log_in">
+    Estamos prestes a começar a nossa aventura — registe-se ou inicie sessão
+</string>
+    <string name="or">Ou</string>
+    <string name="sign_in">Entrar</string>
+    <string name="already_have_an_account">Já tem uma conta?</string>
+    <string name="passHint">***********</string>
+    <string name="sign_up_2">REGISTAR</string>
+    <string name="password">Palavra-passe</string>
+    <string name="username">Nome de utilizador</string>
+    <string name="enter_your_username">Insira o seu nome de utilizador</string>
+    <string name="join_the_sous_chef">Junte-se ao Sous Chef</string>
+    <string name="create_an_account_to_save_your_favorite_recipes_and_start_cooking_like_a_pro">
+    Crie uma conta para guardar as suas receitas favoritas e começar a cozinhar como um profissional.
+</string>
+
+    <string name="backarrow">setaVoltar</string>
+    <string name="google">Google</string>
+    <string name="book">Livro</string>
+    <string name="close">fechar</string>
+
+    <string name="text_6">
+    <font color="#000000">Descubra uma nova forma de guardar e explorar </font>
+    <font color="#FE8417">receitas</font>
+</string>
+
+    <string name="text_7">
+    <font color="#000000">Faça as suas</font>
+    <font color="#FE8417">compras</font>
+    <font color="#000000">de supermercado com</font>
+    <font color="#FE8417">confiança</font>
+</string>
+
+    <string name="text_8">
+    <font color="#000000">Aproveite a sua</font>
+    <font color="#FE8417">cozinha</font>
+</string>
+
+    <string name="text_9">
+    <font color="#000000">Próximo passo?</font>
+    <font color="#FE8417">Comece já</font>
+</string>
+
+    <string name="text_10">
+    <font color="#000000"> Apresentamos o nosso planeador de refeições</font>
+</string>
+
+    <string name="text_11">
+    <font color="#FE8417">Planear - agendar - comprar - cozinhar - comer</font>
+</string>
+
+    <string name="text_13">
+    <font color="#000000">Configure o seu planeador de refeições, a sua despensa e faça as suas </font>
+    <font color="#FE8417">compras</font>
+    <font color="#000000">com</font>
+    <font color="#FE8417">confiança</font>
+</string>
+
+    <string name="text_14">
+    <font color="#FE8417">PLANEADOR DE REFEIÇÕES</font>
+</string>
+
+    <string name="text_1">
+    <font color="#000000">Comece a sua empolgante jornada no</font>
+    <font color="#FE8417">Livro de Receitas </font>
+    <font color="#000000">Sous Chef</font>
+</string>
+
+    <string name="text_2">
+    <font color="#BDBDBD">Ao iniciar sessão, concorda com os</font>
+    <font color="#FE8417" font-weight="bold">termos e condições </font>
+    <font color="#BDBDBD">desta aplicação</font>
+</string>
+
+    <string name="edit">editar</string>
+
+    <string name="recipe_instructions">
+    <font color="#A4A4A4">• Quando terminar, clique em </font>
+    <font color="#FE8417">seguinte</font>
+</string>
+
+    <string name="recipe_instructions2">
+    <font color="#A4A4A4">3. Depois clique em </font>
+    <font color="#FE8417">Agendar</font>
+</string>
+
+    <string name="no_ingredients_yet">Ainda sem ingredientes</string>
+    <string name="no_steps_yet">Ainda sem passos</string>
+
+    <string name="field_required">Obrigatório</string>
+    <string name="eg_15">ex.: 15</string>
+
+    <string name="hello_blank_fragment">Olá fragmento vazio</string>
+
+    <string name="profile_image">Imagem de Perfil</string>
+    <string name="recipe_image">Imagem da Receita</string>
+
+    <!--  HOME -->
+
+    <string name="greeting_user">Olá, Usuário</string>
+
+    <string name="lets_try_these_out">Vamos Experimentar Isto</string>
+    <string name="see_all">Ver tudo</string>
+    <string name="categories">Categorias</string>
+    <string name="favorite_recipes">Receitas Favoritas</string>
+
+    <string name ="myrecipe">Minhas Receitas</string>
+
+    <string name="meal_planner_title">PLANEADOR DE REFEIÇÕES</string>
+    <string name="planner_button">PLANEADOR</string>
+    <string name="pantry_button">DESPENSA</string>
+
+    <string name="title_pantry">DESPENSA</string>
+    <string name="btn_planner">PLANEADOR</string>
+    <string name="btn_pantry">DESPENSA</string>
+
+    <string name="pantry_instructions_title">INSTRUÇÕES DA DESPENSA</string>
+    <string name="pantry_instructions_subtitle">Siga as instruções abaixo:</string>
+
+    <string name="pantry_step_1">1. Clique no botão +.</string>
+    <string name="pantry_step_2">2. Na janela pop-up, escreva o nome do item (ex.: “Açúcar”).</string>
+    <string name="pantry_step_3">3. Escolha a categoria → “Tenho” ou “A Obter”.</string>
+    <string name="pantry_step_4">4. Depois clique no botão Adicionar.</string>
+    <string name="pantry_step_5">5. Assim mesmo, o item foi adicionado à sua despensa.</string>
+    <string name="pantry_step_6">6. O item aparecerá na lista em “Tenho” ou “A Obter”, conforme a sua escolha.</string>
+
+    <string name="label_have">TENHO:</string>
+    <string name="label_to_get">A OBTER</string>
+
+    <string name="instructions_plan_meal_title">INSTRUÇÕES PARA PLANEAR REFEIÇÃO</string>
+    <string name="instructions_subtitle">Siga as instruções abaixo:</string>
+
+    <string name="instruction_step_1">1. Escolha a receita.</string>
+    <string name="instruction_step_2">2. Escolha a data usando o seletor de datas.</string>
+    <string name="instruction_step_3">3. Selecione o horário da refeição (Pequeno-almoço, Almoço ou Jantar).</string>
+    <string name="instruction_step_4">4. Assim mesmo, já adicionou a sua refeição planeada.</string>
+
+    <string name="label_recipe_name">NOME DA RECEITA</string>
+    <string name="hint_select_recipe">Selecione das Minhas Receitas</string>
+
+    <string name="label_date">DATA</string>
+    <string name="hint_select_date">Selecionar data</string>
+
+    <string name="btn_schedule">Agendar</string>
+
+    <string name="settings"> Definições</string>
+    <string name="account_settings">Configurações da conta</string>
+    <string name="username_label">nome de usuário</string>
+
+    <string name="password_masked">Senha:********</string>
+
+    <string name="dark_mode">Modo escuro</string>
+    <string name="biometrics">Biometria</string>
+
+    <string name="contact_us">Contacte-nos</string>
+
+    <string name="logout">Terminar sessão</string>
+
+    <string name="app_version">Versão da aplicação 1.1 sous chef</string>
+
+    <string name = "notifications">Notificações</string>
+
+    <string name="language_label">Idioma: Inglês</string>
+
+
+    <string name="recipe_name">Nome da Receita</string>
+    <string name="ingredients_label">Ingredientes</string>
+    <string name="ingredients_count">Ingredientes: %1$d</string>
+    <string name="duration_minutes">%1$d min</string>
+    <string name="steps_label">Passos</string>
+
+    <string name ="mealmess">Agora ficou mais fácil para você ter suas refeições semanais prontas.</string>
+    <string name ="next">Proximo</string>
+    <string name ="skip">Pular</string>
+    <string name="oops">Chega de "Ops, esqueci de comprar tomates!"</string>
+    <string name="start">Começar</string>
+
+
+    <string name="create_recipe">Criar receita</string>
+    <string name="step_1">1</string>
+
+    <string name="add_recipe_name_and_image">Adicione o nome e a imagem da sua receita</string>
+    <string name="follow_instructions_below">Siga as instruções abaixo:</string>
+
+    <string name="fill_fields">• Preencha os campos abaixo</string>
+    <string name="give_recipe_name">• Dê um nome à sua receita</string>
+    <string name="date_of_creation">• A data de criação</string>
+    <string name="select_category">• Selecione a categoria</string>
+    <string name="add_image_instruction">• E por fim, adicione uma imagem</string>
+
+
+    <string name="recipe_name_title">NOME DA RECEITA</string>
+    <string name="recipe_name_hint">ex.: “Lasanha”</string>
+
+    <string name="category_title">CATEGORIA</string>
+    <string name="category_hint">Selecione uma categoria</string>
+
+    <string name="cooking_time">TEMPO DE COZEDURA (min)</string>
+    <string name="time_hint">ex. 15</string>
+
+    <string name="add_image_title">ADICIONAR IMAGEM</string>
+    <string name="upload_file">Carregar ficheiro</string>
+    <string name="clear_file">✕</string>
+    <string name="file_example_name">Lasanha.png</string>
+
+    <string name="cancel">CANCELAR</string>
+
+    <string name="add_ingredients_title">Adicione ingredientes à sua receita</string>
+
+
+    <string name="step_click_add_ingredient">• Clique em adicionar ingrediente</string>
+    <string name="step_write_ingredient">• Depois escreva um ingrediente na janela pop-up e indique a quantidade</string>
+    <string name="step_click_add">• Depois clique em adicionar</string>
+    <string name="step_ingredient_added">• Assim, o ingrediente será adicionado</string>
+    <string name="step_ingredients_displayed">• Os ingredientes serão exibidos abaixo</string>
+    <string name="step_repeat_until_done">• Repita os passos até adicionar todos os ingredientes</string>
+
+    <string name="add_steps_title">Adicione passos à sua receita</string>
+
+
+    <string name="step_click_add_step">• Clique em Adicionar Passo.</string>
+    <string name="step_write_step_description">• Na janela pop-up, escreva a descrição do passo (ex.: “Pré-aqueça o forno a 180°C (350°F)”).</string>
+
+    <string name="step_added_success">• Assim, o passo será adicionado.</string>
+    <string name="steps_displayed_below">• Os passos serão exibidos abaixo.</string>
+    <string name="repeat_until_all_steps_added">• Repita o processo até adicionar todos os passos.</string>
+
+</resources>

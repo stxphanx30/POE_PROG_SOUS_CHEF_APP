@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
                 android:gravity="center"
-                android:text="Recipe name"
+                android:text="@string/recipe_name"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -121,7 +121,7 @@
                     android:paddingTop="4dp"
                     android:paddingRight="12dp"
                     android:paddingBottom="6dp"
-                    android:text="ingredients"
+                    android:text="@string/ingredients_label"
                     android:textColor="@color/sous_chef_orange"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -177,7 +177,7 @@
                     android:paddingTop="4dp"
                     android:paddingRight="12dp"
                     android:paddingBottom="6dp"
-                    android:text="steps"
+                    android:text="@string/steps_label"
                     android:textColor="@color/sous_chef_orange"
                     android:textSize="14sp"
                     android:textStyle="bold" />

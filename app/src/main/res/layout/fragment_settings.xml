@@ -20,7 +20,7 @@
             android:id="@+id/account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings"
+            android:text="@string/settings"
             android:textSize="18sp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="20dp"
@@ -36,7 +36,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="Account Settings"
+            android:text="@string/account_settings"
             android:textColor="#FE8417 "
             android:textSize="18sp" />
 
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Language: English"
+                android:text="@string/language_label"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:fontFamily="@font/dm_sans_light"/>
@@ -92,23 +92,6 @@
                 android:gravity="center_vertical"
                 android:paddingVertical="8dp">
 
-                <TextView
-                    android:id="@+id/label_dark_mode"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Dark Mode"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/dm_sans_light"/>
-
-                <Switch
-                    android:id="@+id/switch_dark_mode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:thumb="@drawable/switch_thumb"
-                    android:track="@drawable/switch_track"
-                    />
             </LinearLayout>
 
             <!-- Biometrics Row -->
@@ -124,7 +107,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Notifications"
+                    android:text="@string/notifications"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:fontFamily="@font/dm_sans_light"/>
@@ -151,7 +134,7 @@
             android:layout_gravity="start"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="Contact us"
+            android:text="@string/contact_us"
             android:textColor="#FE8417 "
             android:textSize="18sp" />
 

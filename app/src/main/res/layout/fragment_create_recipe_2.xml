@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="Create recipe"
+            android:text="@string/create_recipe"
             android:textColor="#FE8417"
             android:textSize="18sp"/>
 
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="Add ingredients to your recipe "
+                android:text="@string/add_ingredients_title"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="Follow the instructions below:"
+                android:text="@string/follow_instructions_below"
                 android:textColor="@color/sous_chef_orange"
                 android:textSize="14sp"/>
 
@@ -119,7 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• Click on add ingredient"
+                    android:text="@string/step_click_add_ingredient"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -128,7 +128,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• Then write an ingredient in the pop up screen as well as the amount"
+                    android:text="@string/step_write_ingredient"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -137,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• then click on add"
+                    android:text="@string/step_click_add"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -146,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• just like that you have added your ingredient"
+                    android:text="@string/step_ingredient_added"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -155,7 +155,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• the ingredients will be displayed below"
+                    android:text="@string/step_ingredients_displayed"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -164,11 +164,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• repeat the steps until you add all your ingredients"
+                    android:text="@string/step_repeat_until_done"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
-                <TextView
+
+            <TextView
                     android:id="@+id/step_next"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -206,7 +207,7 @@
                     android:paddingTop="4dp"
                     android:paddingRight="12dp"
                     android:paddingBottom="6dp"
-                    android:text="Ingredients"
+                    android:text="@string/ingredients_label"
                     android:textColor="@color/sous_chef_orange"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -270,7 +271,7 @@
             android:layout_marginEnd="100dp"
             android:background="@drawable/shape_btn_primary_states_red"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="CANCEL"
+            android:text="@string/cancel"
             android:textAllCaps="false"
             android:textColor="#FF0000"
             android:textSize="13sp"/>
@@ -282,7 +283,7 @@
             android:layout_height="46dp"
             android:background="@drawable/bg_btn_primary_orange"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="NEXT"
+            android:text="@string/next"
             android:textAllCaps="false"
             android:textColor="@color/text_primary_btn_colors"
             android:textSize="13sp"/>

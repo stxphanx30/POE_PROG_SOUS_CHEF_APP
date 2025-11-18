@@ -1,5 +1,6 @@
 package com.example.logintemp
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -8,11 +9,19 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.logintemp.databinding.ActivityMainBinding
 import com.example.logintemp.util.SessionManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
+import com.example.logintemp.utils.LocaleHelper
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var session: SessionManager
+
+    // ✅ Move attachBaseContext outside of onCreate
+    override fun attachBaseContext(newBase: Context) {
+        val lang = LocaleHelper.getLanguage(newBase)
+        val context = LocaleHelper.setLocale(newBase, lang)
+        super.attachBaseContext(context)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         navView.setupWithNavController(navController)
 
-
         // Hide bottom nav on specific destinations
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
@@ -50,7 +58,5 @@ class MainActivity : AppCompatActivity() {
                 else -> binding.navView.visibility = View.VISIBLE
             }
         }
-
-
     }
 }

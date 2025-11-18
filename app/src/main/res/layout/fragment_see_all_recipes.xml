@@ -22,7 +22,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/dm_sans_bold"
-        android:text="Lets Try This Out"
+        android:text="@string/lets_try_these_out"
         android:textColor="#FE8417"
         android:textSize="18sp" />
     <!-- 🔸 Search bar (reuse same view as recipes) -->

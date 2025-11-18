@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="Create recipe"
+            android:text="@string/create_recipe"
             android:textColor="#FE8417"
             android:textSize="18sp"/>
 
@@ -50,7 +50,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="1"
+            android:text="@string/step_1"
             android:textColor="@color/black"
             android:textSize="16sp"/>
     </LinearLayout>
@@ -90,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="Add your recipe name and image"
+                android:text="@string/add_recipe_name_and_image"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="Follow the instructions below:"
+                android:text="@string/follow_instructions_below"
                 android:textColor="@color/sous_chef_orange"
                 android:textSize="14sp"/>
 
@@ -118,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• Fill the fields below"
+                    android:text="@string/fill_fields"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -127,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• Give your recipe a name"
+                    android:text="@string/give_recipe_name"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -136,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• The date of creation"
+                    android:text="@string/date_of_creation"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -145,7 +145,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• Select the category"
+                    android:text="@string/select_category"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -154,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/dm_sans_bold"
-                    android:text="• And finally add an image"
+                    android:text="@string/add_image_instruction"
                     android:textColor="#A4A4A4"
                     android:textSize="14sp"/>
 
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="RECIPE NAME"
+                android:text="@string/recipe_name_title"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -184,7 +184,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/bg_field_outline"
-                android:hint="eg., “Lasagna”"
+                android:hint="@string/recipe_name_hint"
                 android:inputType="textPersonName"
                 android:paddingStart="@dimen/field_pad_h"
                 android:paddingTop="@dimen/field_pad_v"
@@ -201,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="CATEGORY"
+                android:text="@string/category_title"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -210,7 +210,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/bg_field_outline"
-                android:hint="Select a category"
+                android:hint="@string/category_hint"
                 android:inputType="none"
                 android:focusable="false"
                 android:textColor="@color/black_900"
@@ -231,7 +231,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="COOKING TIME(min)"
+                android:text="@string/cooking_time"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
             <EditText
@@ -263,7 +263,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="ADD IMAGE"
+                android:text="@string/add_image_title"
                 android:textColor="@color/dark_gray"
                 android:textSize="18sp"/>
 
@@ -273,7 +273,7 @@
                 android:layout_height="49dp"
                 android:background="@drawable/shape_btn_light_states"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="Upload File"
+                android:text="@string/upload_file"
                 android:textAllCaps="false"
                 android:textColor="@color/text_primary_btn_colors"
                 android:textSize="16sp"
@@ -301,7 +301,7 @@
                     android:id="@+id/tvFileName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lasagna.png"
+                    android:text="@string/file_example_name"
                     android:textColor="#A4A4A4"
                     android:textSize="16sp"/>
             </LinearLayout>
@@ -332,7 +332,7 @@
             android:layout_marginEnd="100dp"
             android:background="@drawable/shape_btn_primary_states_red"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="CANCEL"
+            android:text="@string/cancel"
             android:textAllCaps="false"
             android:textColor="#FF0000"
             android:textSize="13sp"/>
@@ -344,7 +344,7 @@
             android:layout_height="46dp"
             android:background="@drawable/bg_btn_primary_orange"
             android:fontFamily="@font/dm_sans_bold"
-            android:text="NEXT"
+            android:text="@string/next"
             android:textAllCaps="false"
             android:textColor="@color/text_primary_btn_colors"
             android:textSize="13sp"/>
