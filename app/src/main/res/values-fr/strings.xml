@@ -10,7 +10,7 @@
     <string name="title_profile">Profil</string>
 
     <string name="profile_picture">Photo de profil</string>
-
+<string name="btn_planner">PLANIFICATEUR</string>
     <string name="sign_up">S’inscrire</string>
     <string name="we_are_about_to_start_our_adventure_register_or_log_in">
         Nous sommes sur le point de commencer notre aventure — inscrivez-vous ou connectez-vous
