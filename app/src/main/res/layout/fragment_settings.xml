@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -24,10 +25,8 @@
             android:textSize="18sp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="20dp"
-            android:textColor="#FE8417 "
-            android:fontFamily="@font/dm_sans_bold"
-            />
-
+            android:textColor="#FE8417"
+            android:fontFamily="@font/dm_sans_bold" />
 
         <TextView
             android:id="@+id/account_settings"
@@ -37,7 +36,7 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/dm_sans_bold"
             android:text="@string/account_settings"
-            android:textColor="#FE8417 "
+            android:textColor="#FE8417"
             android:textSize="18sp" />
 
         <Space
@@ -46,7 +45,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginTop="12dp"
             android:gravity="center_vertical"
@@ -60,7 +59,7 @@
                 android:text="@string/language_label"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:fontFamily="@font/dm_sans_light"/>
+                android:fontFamily="@font/dm_sans_light" />
 
             <View
                 android:layout_width="0dp"
@@ -77,24 +76,14 @@
 
         </LinearLayout>
 
-
+        <!-- Settings rows container -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="16dp">
 
-            <!-- Dark Mode Row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingVertical="8dp">
-
-            </LinearLayout>
-
-            <!-- Biometrics Row -->
+            <!-- Notifications Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,21 +99,18 @@
                     android:text="@string/notifications"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:fontFamily="@font/dm_sans_light"/>
+                    android:fontFamily="@font/dm_sans_light" />
 
                 <Switch
                     android:id="@+id/switch_biometric"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:thumb="@drawable/switch_thumb"
-                    android:track="@drawable/switch_track"
-                    />
+                    android:track="@drawable/switch_track" />
 
             </LinearLayout>
 
         </LinearLayout>
-
-
 
         <!-- Contact Us -->
         <TextView
@@ -135,9 +121,8 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/dm_sans_bold"
             android:text="@string/contact_us"
-            android:textColor="#FE8417 "
+            android:textColor="#FE8417"
             android:textSize="18sp" />
-
 
     </LinearLayout>
 </ScrollView>

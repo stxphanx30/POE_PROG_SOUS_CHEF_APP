@@ -1,6 +1,7 @@
 package com.example.logintemp
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import com.example.logintemp.databinding.ActivityMainBinding
 import com.example.logintemp.util.SessionManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.logintemp.utils.LocaleHelper
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +37,9 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
+        // create notification channel (Android 8+)
+        createNotificationChannel()
+
         val navView: BottomNavigationView = binding.navView
 
         // ✅ Correct way in an Activity
@@ -57,6 +62,20 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_addrecipe3 -> binding.navView.visibility = View.GONE
                 else -> binding.navView.visibility = View.VISIBLE
             }
+        }
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channelId = "souschef_mealplan_channel"
+            val name = "Meal Planner"
+            val descriptionText = "Notifications for meal planner reminders"
+            val importance = android.app.NotificationManager.IMPORTANCE_DEFAULT
+            val channel = android.app.NotificationChannel(channelId, name, importance).apply {
+                description = descriptionText
+            }
+            val nm = getSystemService(android.content.Context.NOTIFICATION_SERVICE) as android.app.NotificationManager
+            nm.createNotificationChannel(channel)
         }
     }
 }

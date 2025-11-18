@@ -114,11 +114,7 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
-        // Dark mode toggle
-        binding.switchDarkMode.isChecked = DarkModeManager.isDarkModeEnabled(requireContext())
-        binding.switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
-            DarkModeManager.setDarkMode(requireContext(), isChecked)
-        }
+
 
         // Safe Biometric Toggle
         binding.switchBiometric.isChecked = session.isBiometricEnabled()

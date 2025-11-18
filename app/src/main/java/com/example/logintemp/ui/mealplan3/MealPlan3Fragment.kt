@@ -1,19 +1,25 @@
 package com.example.logintemp.ui.mealplan3
 
 import android.app.DatePickerDialog
+import android.app.PendingIntent
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.logintemp.MainActivity
 import com.example.logintemp.R
 import com.example.logintemp.data.AppDatabase
-import com.example.logintemp.data.recipe.RecipeEntity
 import com.example.logintemp.data.mealplan3.MealPlanEntity
+import com.example.logintemp.data.recipe.RecipeEntity
 import com.example.logintemp.databinding.FragmentMealPlanBinding
 import com.example.logintemp.util.SessionManager
 import kotlinx.coroutines.Dispatchers
@@ -34,6 +40,11 @@ class MealPlan3Fragment : Fragment() {
     private var selectedRecipeId: Long? = null
 
     private var selectedDateEpoch: Long? = null
+
+    companion object {
+        private const val REQ_POST_NOTIF = 1001
+        private const val CHANNEL_ID = "souschef_mealplan_channel"
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -76,8 +87,7 @@ class MealPlan3Fragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             // I/O
             val list: List<RecipeEntity> = withContext(Dispatchers.IO) {
-                // Si tu as un DAO dédié, remplace par: recipeDao.getRecipesForUser(userId)
-                // Ici on montre la requête "classique" SELECT * WHERE userId
+                // getAllRecipesForUser should return List<RecipeEntity>
                 recipeDao.getAllRecipesForUser(userId)
             }
 
@@ -90,8 +100,9 @@ class MealPlan3Fragment : Fragment() {
                 return@launch
             }
 
-            recipeNames = list.map { it.name }
-            recipeIds = list.map { it.id.toLong() }
+            // safe mapping: handle null names defensively
+            recipeNames = list.map { it.name ?: "Untitled" }
+            recipeIds = list.map { it.id }
 
             val adapter = ArrayAdapter(requireContext(), R.layout.item_category_pill, recipeNames)
             binding.etRecipePicker.setAdapter(adapter)
@@ -139,7 +150,7 @@ class MealPlan3Fragment : Fragment() {
         val mealDao = db.mealPlanDao()
 
         viewLifecycleOwner.lifecycleScope.launch {
-            withContext(Dispatchers.IO) {
+            val mealPlanId = withContext(Dispatchers.IO) {
                 mealDao.insert(
                     MealPlanEntity(
                         recipeId = recipeId,
@@ -148,7 +159,71 @@ class MealPlan3Fragment : Fragment() {
                 )
             }
 
+            // notify user locally that meal plan was created
+            sendLocalNotification(
+                title = "Meal Planner",
+                message = "Your meal '$pickedName' has been created!"
+            )
+
+            // navigate back to meal planner list (or wherever)
             findNavController().navigate(R.id.navigation_mealplanner)
+        }
+    }
+
+    private fun sendLocalNotification(title: String, message: String) {
+        val context = requireContext()
+        val channelId = CHANNEL_ID
+
+        val intent = Intent(context, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+
+        val pendingIntent = PendingIntent.getActivity(
+            context,
+            0,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or
+                    (if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M)
+                        PendingIntent.FLAG_IMMUTABLE else 0)
+        )
+
+        val builder = NotificationCompat.Builder(context, channelId)
+            .setSmallIcon(R.drawable.logo) // mets ton icône (ajoute-la si nécessaire)
+            .setContentTitle(title)
+            .setContentText(message)
+            .setAutoCancel(true)
+            .setContentIntent(pendingIntent)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        // Permission check Android 13+ (POST_NOTIFICATIONS)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            val hasPermission = ContextCompat.checkSelfPermission(
+                context,
+                android.Manifest.permission.POST_NOTIFICATIONS
+            ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+
+            if (!hasPermission) {
+                // demande simple ; callback traité dans onRequestPermissionsResult
+                requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), REQ_POST_NOTIF)
+                return
+            }
+        }
+
+        // use time-based id to avoid collisions (safe positive int)
+        val notifId = (System.currentTimeMillis() and Int.MAX_VALUE.toLong()).toInt()
+
+        NotificationManagerCompat.from(context).notify(notifId, builder.build())
+    }
+
+    // Optional: handle user's response to permission request
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == REQ_POST_NOTIF) {
+            if (grantResults.isNotEmpty() && grantResults[0] == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(requireContext(), "Notifications enabled", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(requireContext(), "Notifications permission denied", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

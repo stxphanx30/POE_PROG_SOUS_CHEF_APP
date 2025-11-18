@@ -106,9 +106,6 @@
 
     <string name="hello_blank_fragment">Olá fragmento vazio</string>
 
-    <string name="profile_image">Imagem de Perfil</string>
-    <string name="recipe_image">Imagem da Receita</string>
-
     <!--  HOME -->
 
     <string name="greeting_user">Olá, Usuário</string>

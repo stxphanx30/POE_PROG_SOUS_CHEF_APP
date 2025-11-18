@@ -13,6 +13,8 @@ import com.example.logintemp.data.recipe.RecipeDao
 import com.example.logintemp.data.recipe.RecipeEntity
 import com.example.logintemp.data.recipe.StepEntity
 import com.example.logintemp.data.user.User
+import com.example.logintemp.data.notification.NotificationDao
+import com.example.logintemp.data.notification.NotificationEntity
 import com.example.logintemp.data.user.UserDao
 
 @Database(
@@ -22,9 +24,10 @@ import com.example.logintemp.data.user.UserDao
         IngredientEntity::class,
         StepEntity::class,
         MealPlanEntity::class,
-        PantryItem::class
+        PantryItem::class,
+        NotificationEntity::class,
     ],
-    version = 7,
+    version = 8,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -34,7 +37,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun recipeDao(): RecipeDao
     abstract fun mealPlanDao(): MealPlanDao
     abstract fun pantryDao(): PantryDao
-
+    abstract fun notificationDao(): NotificationDao
     companion object {
         @Volatile private var INSTANCE: AppDatabase? = null
 

@@ -17,21 +17,15 @@
         android:layout_marginTop="40dp"
         android:background="@color/white">
 
-        <!-- ======= TES ÉLÉMENTS EXISTANTS (inchangés) ======= -->
+        <!-- Back arrow -->
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/backarrow"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.03"
             android:layout_gravity="start"
-            app:srcCompat="@drawable/arrow" />
+            android:src="@drawable/arrow" />
 
+        <!-- Title -->
         <TextView
             android:id="@+id/account"
             android:layout_width="wrap_content"
@@ -40,69 +34,15 @@
             android:textSize="18sp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="20dp"
-            android:textColor="#FE8417 "
+            android:textColor="#FE8417"
             android:fontFamily="@font/dm_sans_bold" />
 
-        <!-- ======= AJOUT: liste verticale de notifications ======= -->
+        <!-- Container WHERE we will ADD dynamic notifications -->
         <LinearLayout
             android:id="@+id/notificationsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- EXEMPLE D’ITEM (tu peux dupliquer ce bloc pour d’autres) -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:layout_marginBottom="12dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <TextView
-                    android:id="@+id/notificationTitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/dm_sans_bold"
-                    android:text="Account created"
-                    android:textColor="@color/sous_chef_orange"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/notificationMessage"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/dm_sans_extralight"
-                    android:text="hi,Elton your account was created"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/notificationTitle" />
-
-
-                <TextView
-                    android:id="@+id/notificationTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/dm_sans_bold"
-                    android:text="2 min ago"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/notificationMessage" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </LinearLayout>
-
+            android:orientation="vertical" />
 
     </LinearLayout>
 </ScrollView>
