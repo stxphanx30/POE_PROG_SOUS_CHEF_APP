@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LoginTemp</string>
+    <string name="title_home">Ekhaya</string>
+    <string name="title_dashboard">Iphaneli</string>
+    <string name="title_notifications">Izaziso</string>
+    <string name="title_mealplan">Isicwangciso Sokutya</string>
+    <string name="title_settings">Izicwangciso</string>
+
+    <string name="title_profile">Iprofayile</string>
+
+    <string name="profile_picture">Umfanekiso weprofayile</string>
+
+    <string name="sign_up">Bhalisa</string>
+
+    <string name="we_are_about_to_start_our_adventure_register_or_log_in">
+        Siza kuqalisa uhambo lwethu — nceda ubhalise okanye ungene ngemvume
+    </string>
+
+    <string name="or">Okanye</string>
+    <string name="sign_in">Ngena</string>
+    <string name="already_have_an_account">Sele unayo iakhawunti?</string>
+    <string name="passHint">*****</string>
+    <string name="sign_up_2">BHAlISA</string>
+    <string name="password">Iphasiwedi</string>
+    <string name="username">Igama lomsebenzisi</string>
+    <string name="enter_your_username">Ngenisa igama lakho lomsebenzisi</string>
+
+    <string name="join_the_sous_chef">Joyina iSous Chef</string>
+
+    <string name="create_an_account_to_save_your_favorite_recipes_and_start_cooking_like_a_pro">
+        Yenza iakhawunti ukuze ugcine iiresiphi ozithandayo uze uqale ukupheka njengengcali.
+    </string>
+
+    <string name="backarrow">Buyela</string>
+    <string name="google">Google</string>
+    <string name="book">Incwadi</string>
+    <string name="close">Vala</string>
+
+    <string name="text_6">
+        <font color="#000000">Fumana indlela entsha yokugcina nokuhlola </font>
+        <font color="#FE8417">iiresephi</font>
+    </string>
+
+    <string name="text_7">
+        <font color="#000000">Yenza </font>
+        <font color="#FE8417">uthengiso</font>
+        <font color="#000000"> lweevenkile ngokuzithemba</font>
+    </string>
+
+    <string name="text_8">
+        <font color="#000000">Yonwabela </font>
+        <font color="#FE8417">ikhitshi</font>
+        <font color="#000000"> lakho</font>
+    </string>
+
+    <string name="text_9">
+        <font color="#000000">Inyathelo elilandelayo?</font>
+        <font color="#FE8417">Qala ngoku</font>
+    </string>
+
+    <string name="text_10">
+        <font color="#000000"> Sazisa ngesicwangcisi sokutya</font>
+    </string>
+
+    <string name="text_11">
+        <font color="#FE8417">Cwangcisa - icwangciso - thenga - pheka - yitya</font>
+    </string>
+
+    <string name="text_13">
+        <font color="#000000">Cwangcisa isicwangciso sakho sokutya, ipantry yakho uze wenze </font>
+        <font color="#FE8417">uthengiso</font>
+        <font color="#000000"> ngokuzithemba</font>
+    </string>
+
+    <string name="text_14">
+        <font color="#FE8417">ISICWANGCISO SOKUTYA</font>
+    </string>
+
+    <string name="text_1">
+        <font color="#000000">Qala uhambo lwakho oluvuyisayo kwi</font>
+        <font color="#FE8417">Ncwadi Yezitya </font>
+        <font color="#000000">yeSous Chef</font>
+    </string>
+
+    <string name="text_2">
+        <font color="#BDBDBD">Xa ungena ngemvume, uyavuma </font>
+        <font color="#FE8417">imigaqo nemiqathango </font>
+        <font color="#BDBDBD">yesicelo</font>
+    </string>
+
+    <string name="edit">hlela</string>
+
+    <string name="recipe_instructions">
+        <font color="#A4A4A4">• Xa ugqibile, cofa ku </font>
+        <font color="#FE8417">Okulandelayo</font>
+    </string>
+
+    <string name="recipe_instructions2">
+        <font color="#A4A4A4">3. Emva koko cofa ku </font>
+        <font color="#FE8417">Cwangcisa</font>
+    </string>
+
+    <string name="no_ingredients_yet">Akukho zizithako okwangoku</string>
+    <string name="no_steps_yet">Akukho manyathelo okwangoku</string>
+
+    <string name="field_required">Kuyafuneka</string>
+    <string name="eg_15">umzekelo: 15</string>
+
+    <string name="hello_blank_fragment">Molo fragment engenanto</string>
+
+    <!-- HOME -->
+
+    <string name="greeting_user">Molo, Msebenzisi</string>
+
+    <string name="lets_try_these_out">Masizame ezi</string>
+    <string name="see_all">Bonisa zonke</string>
+    <string name="categories">Iindidi</string>
+    <string name="favorite_recipes">Iiresiphi Ozithandayo</string>
+
+    <string name="myrecipe">Iiresiphi Zam</string>
+
+    <string name="meal_planner_title">ISICWANGCISO SOKUTYA</string>
+    <string name="planner_button">ISICWANGCISO</string>
+    <string name="pantry_button">IPANTRY</string>
+
+    <string name="title_pantry">IPANTRY</string>
+    <string name="btn_planner">ISICWANGCISO</string>
+    <string name="btn_pantry">IPANTRY</string>
+
+    <string name="pantry_instructions_title">IMIYALO YEPANTRY</string>
+    <string name="pantry_instructions_subtitle">Landela imiyalelo engezantsi:</string>
+
+    <string name="pantry_step_1">1. Cofa iqhosha +.</string>
+    <string name="pantry_step_2">2. Bhala igama lento (umzekelo: "Iswekile").</string>
+    <string name="pantry_step_3">3. Khetha udidi → “Ndinayo” okanye “Ndizakuyifumana”.</string>
+    <string name="pantry_step_4">4. Emva koko cofa ku Yongeza.</string>
+    <string name="pantry_step_5">5. Into iza kongezwa kwipantri yakho.</string>
+    <string name="pantry_step_6">6. Iza kuvela phantsi kwe "Ndinayo" okanye "Ndizakuyifumana".</string>
+
+    <string name="label_have">NDINAYO:</string>
+    <string name="label_to_get">NDIZAKUYIFUMANA</string>
+
+    <string name="instructions_plan_meal_title">IMIYALO YOKUCWANGCISA UKUTYA</string>
+    <string name="instructions_subtitle">Landela oku kulandelayo:</string>
+
+    <string name="instruction_step_1">1. Khetha iresiphi.</string>
+    <string name="instruction_step_2">2. Khetha umhla usebenzisa isikhethi somhla.</string>
+    <string name="instruction_step_3">3. Khetha ixesha lokutya (Isidlo sakusasa, Isidlo sasemini okanye Isidlo sangokuhlwa).</string>
+    <string name="instruction_step_4">4. Kulula — usongeze ukutya kwakho.</string>
+
+    <string name="label_recipe_name">IGAMA LERESIPHI</string>
+    <string name="hint_select_recipe">Khetha kwiIresiphi Zam</string>
+
+    <string name="label_date">UMHLA</string>
+    <string name="hint_select_date">Khetha umhla</string>
+
+    <string name="btn_schedule">Cwangcisa</string>
+
+    <string name="settings">Izicwangciso</string>
+    <string name="account_settings">Izicwangciso zeAkhawunti</string>
+    <string name="username_label">Igama lomsebenzisi</string>
+
+    <string name="password_masked">Iphasiwedi: ****</string>
+
+    <string name="dark_mode">Imo emnyama</string>
+    <string name="biometrics">I-Biometrics</string>
+
+    <string name="contact_us">Qhagamshelana nathi</string>
+
+    <string name="logout">Phuma</string>
+
+    <string name="app_version">Inguqulelo Yesicelo 1.1 sous chef</string>
+
+    <string name="notifications">Izaziso</string>
+
+    <string name="language_label">Ulwimi</string>
+
+    <string name="recipe_name">Igama Leresiphi</string>
+    <string name="ingredients_label">Izithako</string>
+    <string name="ingredients_count">Izithako: %1$d</string>
+    <string name="duration_minutes">%1$d imiz</string>
+    <string name="steps_label">Amanyathelo</string>
+
+    <string name="mealmess">Ngoku sekulula ukulungelelanisa ukutya kwakho kweveki.</string>
+    <string name="next">Okulandelayo</string>
+    <string name="skip">Tsiba</string>
+    <string name="oops">Akusayi kuphinda uthi "Oops, ndilibele ukuthenga iitumati!"</string>
+    <string name="start">Qala</string>
+
+    <string name="create_recipe">Yenza iresiphi</string>
+    <string name="step_1">1</string>
+
+    <string name="add_recipe_name_and_image">Yongeza igama kunye nomfanekiso weresiphi yakho</string>
+    <string name="follow_instructions_below">Landela imiyalelo engezantsi:</string>
+
+    <string name="fill_fields">• Gcwalisa imimandla engezantsi</string>
+    <string name="give_recipe_name">• Nika iresiphi yakho igama</string>
+    <string name="date_of_creation">• Umhla wokudala</string>
+    <string name="select_category">• Khetha udidi</string>
+    <string name="add_image_instruction">• Okokugqibela, yongeza umfanekiso</string>
+
+    <string name="recipe_name_title">IGAMA LERESIPHI</string>
+    <string name="recipe_name_hint">umzekelo: “Lasanha”</string>
+
+    <string name="category_title">UDIDI</string>
+    <string name="category_hint">Khetha udidi</string>
+
+    <string name="cooking_time">IXESHA LOKUPHEKA (imiz)</string>
+    <string name="time_hint">umzekelo 15</string>
+
+    <string name="add_image_title">YONKEZA UMFANEKISO</string>
+    <string name="upload_file">Layisha Ifayile</string>
+    <string name="clear_file">✕</string>
+    <string name="file_example_name">Lasanha.png</string>
+
+    <string name="cancel">RHoxisa</string>
+
+    <string name="add_ingredients_title">Yongeza izithako kwiresiphi yakho</string>
+
+    <string name="step_click_add_ingredient">• Cofa ku Yongeza isithako</string>
+    <string name="step_write_ingredient">• Bhala isithako kunye nobungakanani kwifestile edityanisiweyo</string>
+    <string name="step_click_add">• Cofa ku Yongeza</string>
+    <string name="step_ingredient_added">• Isithako songezwa ngempumelelo</string>
+    <string name="step_ingredients_displayed">• Izithako ziya kuvela ngezantsi</string>
+    <string name="step_repeat_until_done">• Phinda de wongeze zonke izithako</string>
+
+    <string name="add_steps_title">Yongeza amanyathelo kwiresiphi</string>
+
+    <string name="step_click_add_step">• Cofa ku Yongeza Inyathelo.</string>
+    <string name="step_write_step_description">• Bhala inkcazelo yenyathelo (umzekelo: “Fudumeza i-oven ibe yi-180°C”).</string>
+
+    <string name="step_added_success">• Inyathelo longezwe ngempumelelo.</string>
+    <string name="steps_displayed_below">• Amanyathelo aya kuvela ngezantsi.</string>
+    <string name="repeat_until_all_steps_added">• Phinda de wongeze onke amanyathelo.</string>
+
+</resources>

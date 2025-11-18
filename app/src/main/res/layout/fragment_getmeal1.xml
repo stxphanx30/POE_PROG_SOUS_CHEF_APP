@@ -36,29 +36,12 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.875"
         app:useMaterialThemeColors="false" />
 
-
-    <TextView
-        android:id="@+id/skipText"
-        android:layout_width="116dp"
-        android:layout_height="22dp"
-        android:background="@null"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/skip"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNext"
-        app:layout_constraintVertical_bias="0.222" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -90,13 +73,14 @@
         android:id="@+id/textView26"
         android:layout_width="407dp"
         android:layout_height="93dp"
-        android:layout_marginStart="4dp"
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/dm_sans"
         android:gravity="center"
         android:text="@string/text_11"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.675" />
@@ -112,7 +96,7 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.997" />

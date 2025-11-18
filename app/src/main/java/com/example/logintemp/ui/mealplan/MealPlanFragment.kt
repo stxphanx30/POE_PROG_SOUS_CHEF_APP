@@ -30,9 +30,7 @@ class MealPlanFragment : Fragment() {
         binding.btnNext.setOnClickListener {
             findNavController().navigate(R.id.navigation_mealplan2)
         }
-        binding.skipText.setOnClickListener {
-            findNavController().navigate(R.id.navigation_mealplanner)
-        }
+
 
         // If needed, you can restore the old navigation below:
         // binding.btnNext.setOnClickListener {

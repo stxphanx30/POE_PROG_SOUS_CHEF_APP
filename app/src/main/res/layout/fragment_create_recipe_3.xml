@@ -7,17 +7,6 @@
     android:background="@color/white">
 
     <!-- Flèche retour (fixée en haut) -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:padding="2dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/arrow"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="35dp"/>
 
     <!-- Titre + step (en haut) -->
     <LinearLayout

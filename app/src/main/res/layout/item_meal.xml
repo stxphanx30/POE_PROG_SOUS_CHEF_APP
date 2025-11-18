@@ -15,8 +15,8 @@
         app:cardCornerRadius="16dp"
         app:strokeColor="@color/sous_chef_orange"
         app:strokeWidth="1dp"
-        app:cardUseCompatPadding="false"
         app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -30,18 +30,8 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/app_name"/>
-
-            <ImageButton
-                android:id="@+id/btnHeart"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="8dp"
-                android:background="@android:color/transparent"
-                android:contentDescription="Favorite"
-                android:src="@drawable/heart_filled" />
-
         </FrameLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
     <!-- RIGHT SIDE: text block -->
@@ -51,8 +41,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginStart="12dp"
-        app:layout_constraintStart_toEndOf="@id/cardImage"
-        app:layout_constraintTop_toTopOf="@id/cardImage"
+        app:layout_constraintStart_toEndOf="@+id/cardImage"
+        app:layout_constraintTop_toTopOf="@+id/cardImage"
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
@@ -77,6 +67,7 @@
             android:id="@+id/tvTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/gray_400"
             android:textSize="13sp"
             android:paddingTop="2dp"/>
 
@@ -84,6 +75,7 @@
             android:id="@+id/tvIngredients"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/gray_400"
             android:textSize="13sp"
             android:paddingTop="2dp"/>
 

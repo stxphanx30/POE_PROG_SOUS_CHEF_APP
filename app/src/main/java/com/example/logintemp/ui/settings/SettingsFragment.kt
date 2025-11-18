@@ -15,6 +15,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.logintemp.R
@@ -36,13 +37,10 @@ class SettingsFragment : Fragment() {
     // launcher pour permission POST_NOTIFICATIONS
     private val requestNotificationPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-            // appelé après la demande
             if (granted) {
-                // enabled by user
                 saveNotificationsEnabled(true)
                 binding.switchBiometric.isChecked = true
             } else {
-                // refused -> show disabled and offer settings link
                 saveNotificationsEnabled(false)
                 binding.switchBiometric.isChecked = false
                 Toast.makeText(requireContext(), "Notifications denied. You can enable them in App settings.", Toast.LENGTH_LONG).show()
@@ -64,22 +62,21 @@ class SettingsFragment : Fragment() {
         textLanguage = view.findViewById(R.id.password)
         langSwitch = view.findViewById(R.id.edit3)
 
-        // Load saved language
+        // Load saved language (LocaleHelper should return language code like "en","fr","pt","af","xh")
         var currentLang = LocaleHelper.getLanguage(requireContext())
         updateLanguageText(currentLang)
 
+        // Show simple choice dialog so user can pick English / Français / Português / Afrikaans / isiXhosa
         langSwitch.setOnClickListener {
-            // Toggle language (tu avais en <-> pt dans ton exemple)
-            currentLang = if (currentLang == "en") "pt" else "en"
-
-            // Apply new language
-            LocaleHelper.setLocale(requireContext(), currentLang)
-
-            // Update TextView
-            updateLanguageText(currentLang)
-
-            // Recreate activity to refresh UI
-            requireActivity().recreate()
+            showLanguageChooser(currentLang) { newLang ->
+                if (newLang != currentLang) {
+                    currentLang = newLang
+                    LocaleHelper.setLocale(requireContext(), currentLang)
+                    updateLanguageText(currentLang)
+                    // recreate to apply resources
+                    requireActivity().recreate()
+                }
+            }
         }
 
         // initial state for notifications switch
@@ -95,18 +92,37 @@ class SettingsFragment : Fragment() {
         binding.btnContactUs.setOnClickListener {
             openContactEmail()
         }
+    }
 
-        // Optional: back button if present in your layout (id imageView used in NotificationFragment)
-        // binding.imageView?.setOnClickListener { requireActivity().onBackPressedDispatcher.onBackPressed() }
+    private fun showLanguageChooser(currentLang: String, onSelected: (String) -> Unit) {
+        val labels = arrayOf("English", "Français", "Português", "Afrikaans", "isiXhosa")
+        val codes = arrayOf("en", "fr", "pt", "af", "xh")
+        val checkedIndex = codes.indexOf(currentLang).coerceAtLeast(0)
+
+        AlertDialog.Builder(requireContext())
+            .setTitle(getString(R.string.language_label))
+            .setSingleChoiceItems(labels, checkedIndex) { dialog, which ->
+                val selectedCode = codes.getOrNull(which) ?: "en"
+                onSelected(selectedCode)
+                dialog.dismiss()
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun updateLanguageText(lang: String) {
-        textLanguage.text = if (lang == "en") "Language: English" else "Language: Portuguese"
+        // Affiche le libellé dans la langue courante (ou en anglais si incertain)
+        textLanguage.text = when (lang) {
+            "fr" -> "Langue : Français"
+            "pt" -> "Idioma: Português"
+            "af" -> "Taal: Afrikaans"
+            "xh" -> "Ulwimi: isiXhosa"
+            else -> "Language: English"
+        }
     }
 
     private fun handleNotificationToggle(shouldEnable: Boolean) {
         if (shouldEnable) {
-            // If Android 13+, check permission
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 val granted = ContextCompat.checkSelfPermission(
                     requireContext(), Manifest.permission.POST_NOTIFICATIONS
@@ -125,7 +141,6 @@ class SettingsFragment : Fragment() {
                 binding.switchBiometric.isChecked = true
             }
         } else {
-            // user turned off -> save false
             saveNotificationsEnabled(false)
             binding.switchBiometric.isChecked = false
         }
@@ -147,7 +162,6 @@ class SettingsFragment : Fragment() {
         try {
             startActivity(intent)
         } catch (e: ActivityNotFoundException) {
-            // no email app
             Toast.makeText(requireContext(), "No email app found on this device.", Toast.LENGTH_SHORT).show()
         }
     }
