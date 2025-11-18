@@ -1,4 +1,4 @@
-YouTube Link: https://youtu.be/Y6fJGOLWKw0
+YouTube Link:  https://youtu.be/Y6fJGOLWKw0
 
 ## Story
 
@@ -43,3 +43,15 @@ SousChef is an android application designed to help make your Master Chef dreams
 ### Settings
 - allows the user to toggle the notifications  
 - allows the user to select the provided languages
+
+### minimun version supported 
+- minimum version supported API 28 
+
+### Declaration of AI Usage
+
+
+The SousChef project made minimal use of AI in generating new information for the application. AI image generation was used only for creating the logo in Sora.ai, and Recraft.ai was used to convert that image into a vector format as well as language translation.
+
+ChatGPT, GitHub Copilot, and Google Gemini were used during development. Copilot was primarily used to generate commit comments, while ChatGPT and Gemini assisted with troubleshooting errors and finding alternatives to deprecated libraries. ChatGPT was also occasionally used to help fix layout issues.
+
+This summarizes the extent of AI usage in our project.
